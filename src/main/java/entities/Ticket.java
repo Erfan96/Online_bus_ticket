@@ -26,7 +26,7 @@ public class Ticket {
     private Gender gender;
 
     @ManyToOne
-    @JoinColumn(name = "trave_id", nullable = false)
+    @JoinColumn(name = "travel_id", nullable = false)
     private Travel travel;
 
     @Column(name = "ticket_id", nullable = false)

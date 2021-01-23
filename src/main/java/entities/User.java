@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "client_user")
@@ -23,4 +24,6 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @OneToMany
+    private Set<Ticket> ticket;
 }

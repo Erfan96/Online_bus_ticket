@@ -1,8 +1,6 @@
 package service;
 
 import entities.User;
-import util.JpaUtil;
-
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.criteria.CriteriaBuilder;

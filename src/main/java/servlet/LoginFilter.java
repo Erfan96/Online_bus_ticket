@@ -3,7 +3,6 @@ package servlet;
 
 import service.UserDao;
 import util.JpaUtil;
-
 import javax.persistence.EntityManager;
 import javax.servlet.*;
 import java.io.IOException;
@@ -38,7 +37,6 @@ public class LoginFilter implements Filter {
         }
         finally {
             entityManager.close();
-            JpaUtil.Shutdown();
         }
     }
 

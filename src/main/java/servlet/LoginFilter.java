@@ -1,6 +1,5 @@
 package servlet;
 
-
 import service.UserDao;
 import util.JpaUtil;
 import javax.persistence.EntityManager;
@@ -10,8 +9,10 @@ import java.io.PrintWriter;
 
 
 public class LoginFilter implements Filter {
+
+
     @Override
-    public void init(FilterConfig filterConfig) {
+    public void init(FilterConfig filterConfig){
     }
 
     @Override
@@ -41,6 +42,6 @@ public class LoginFilter implements Filter {
 
     @Override
     public void destroy() {
-
+        JpaUtil.Shutdown();
     }
 }

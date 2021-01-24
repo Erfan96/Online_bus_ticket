@@ -6,6 +6,20 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%
+    int count = 0;
+
+    Cookie[] cookie = request.getCookies();
+    for (Cookie value : cookie) {
+        if (value.getName().equals("user") || value.getName().equals("pass")) {
+            count++;
+        }
+    }
+
+    if (count == 2) {
+        request.getRequestDispatcher("search.jsp").forward(request, response);
+    }
+%>
 <html>
 <head>
     <title>Enter</title>

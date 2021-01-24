@@ -8,17 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>صفحه ورود</title>
+    <title>Enter</title>
 </head>
 <body>
 <form action="login" method="post">
-    <label>نام کاربری :
-        <input name="userName" type="text" placeholder="نام کاربری را وارد کنید" required>
+    <label> UserName :
+        <input name="userName" type="text" placeholder="Enter your username" required>
     </label><br>
-    <label>رمز عبور :
-        <input name="password" type="password" placeholder="رمز عبور را وارد کنید" required>
+    <label>  Password :
+        <input name="password" type="password" placeholder="Enter your password" required>
     </label><br>
-<input type="submit" value="ورود">
+<input type="submit" value="Login">
 </form>
 </body>
 </html>

@@ -4,6 +4,8 @@ import service.UserDao;
 import util.JpaUtil;
 import javax.persistence.EntityManager;
 import javax.servlet.*;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -28,6 +30,12 @@ public class LoginFilter implements Filter {
             String password = servletRequest.getParameter("password");
 
             if (userDao.checkUser(username, password)) {
+                Cookie cookieUse = new Cookie("user", username);
+                Cookie cookiePas = new Cookie("pass", password);
+                HttpServletResponse response = (HttpServletResponse) servletResponse;
+                response.addCookie(cookieUse);
+                response.addCookie(cookiePas);
+
                 filterChain.doFilter(servletRequest, servletResponse);
             }
             else {

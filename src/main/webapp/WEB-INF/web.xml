@@ -22,4 +22,12 @@
         <filter-name>filter</filter-name>
         <url-pattern>/login</url-pattern>
     </filter-mapping>
+    <servlet>
+        <servlet-name>travel</servlet-name>
+        <servlet-class>servlet.TravelList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>travel</servlet-name>
+        <url-pattern>/travel</url-pattern>
+    </servlet-mapping>
 </web-app>

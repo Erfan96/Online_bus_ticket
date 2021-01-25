@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.lang.reflect.Method" %><%--
   Created by IntelliJ IDEA.
   User: efsam
   Date: 1/23/2021
@@ -17,7 +17,7 @@
     }
 
     if (count == 2) {
-        request.getRequestDispatcher("search.jsp").forward(request, response);
+        request.getRequestDispatcher("/login").forward(request, response);
     }
 %>
 <html>
@@ -25,7 +25,7 @@
     <title>Enter</title>
 </head>
 <body>
-<form action="login" method="post">
+<form action="login" >
     <label> UserName :
         <input name="userName" type="text" placeholder="Enter your username" required>
     </label><br>

@@ -20,4 +20,8 @@ public class City {
     @Column(name = "name_city", nullable = false, unique = true)
     private String name;
 
+    @Override
+    public String toString() {
+        return name;
+    }
 }

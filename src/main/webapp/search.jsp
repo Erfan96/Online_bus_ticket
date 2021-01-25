@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<form action="" method="">
+<form action="" method="get">
 
     <label> Origin
         <select name="origin">
@@ -34,7 +34,7 @@
     </label>
 
     <label> Date
-        <input type="text" placeholder="13**/**/**">
+        <input name="date" type="text" placeholder="13**/**/**">
     </label>
 
     <input type="submit" value="search">

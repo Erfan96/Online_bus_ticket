@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<form action="" method="get">
+<form action="travel" method="get">
 
     <label> Origin
         <select name="origin">

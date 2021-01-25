@@ -34,7 +34,7 @@
     </label>
 
     <label> Date
-        <input name="date" type="text" placeholder="13**/**/**">
+        <input name="date" type="text" placeholder="2021/**/**">
     </label>
 
     <input type="submit" value="search">

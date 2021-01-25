@@ -35,4 +35,9 @@ public class Travel {
 
     @Column(name = "travel_id", nullable = false)
     private String travelId;
+
+    @Override
+    public String toString() {
+        return origin + " - " + destination;
+    }
 }

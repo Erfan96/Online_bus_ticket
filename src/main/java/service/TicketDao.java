@@ -3,10 +3,8 @@ package service;
 import entities.Gender;
 import entities.Ticket;
 import entities.Travel;
-import util.JpaUtil;
-
+import entities.User;
 import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -22,7 +20,7 @@ public class TicketDao extends EntityDao<Ticket, Integer>{
         return Ticket.class;
     }
 
-    public void addTicket(String pName, Gender gender, Travel travel, String tId) {
+    public void addTicket(String pName, Gender gender, Travel travel, String tId, User user) {
 
         entityManager.getTransaction().begin();
         Ticket ticket = new Ticket();
@@ -30,6 +28,7 @@ public class TicketDao extends EntityDao<Ticket, Integer>{
         ticket.setGender(gender);
         ticket.setTravel(travel);
         ticket.setTicketId(tId);
+        ticket.setUser(user);
         save(ticket);
 
         entityManager.getTransaction().commit();

@@ -38,4 +38,12 @@
         <servlet-name>buy</servlet-name>
         <url-pattern>/buy</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>success</servlet-name>
+        <servlet-class>servlet.successfulServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>success</servlet-name>
+        <url-pattern>/success</url-pattern>
+    </servlet-mapping>
 </web-app>

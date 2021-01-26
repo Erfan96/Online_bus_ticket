@@ -46,4 +46,12 @@
         <servlet-name>success</servlet-name>
         <url-pattern>/success</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ticket</servlet-name>
+        <servlet-class>servlet.TicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ticket</servlet-name>
+        <url-pattern>/ticket</url-pattern>
+    </servlet-mapping>
 </web-app>

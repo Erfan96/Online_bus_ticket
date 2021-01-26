@@ -6,7 +6,6 @@ import javax.persistence.EntityManager;
 import javax.servlet.*;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -37,8 +36,6 @@ public class LoginFilter implements Filter {
                 response.addCookie(cookieUse);
                 response.addCookie(cookiePas);
 
-                servletRequest.setAttribute("use", username);
-                servletRequest.setAttribute("pass", password);
                 filterChain.doFilter(servletRequest, servletResponse);
             }
             else {

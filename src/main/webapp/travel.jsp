@@ -7,6 +7,7 @@
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8"%>
+
 <html>
 <head>
     <title>Title</title>
@@ -29,8 +30,8 @@
             <tr>
                 <td align="center"><c:out value="${travel.departureTime}" /></td>
                 <td align="center"><c:out value="${travel.travelId}" /></td>
-               <form action="">
-                <td align="center" ><input type="submit" id="${travel.travelId}" value="buy"></td>
+               <form action="buy">
+                <td align="center" ><input name="${travel.travelId}" type="submit" value="buy"></td>
                </form>
             </tr>
         </c:forEach>
@@ -38,3 +39,4 @@
 </div>
 </body>
 </html>
+

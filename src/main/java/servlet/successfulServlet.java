@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class successfulServlet extends HttpServlet {
@@ -29,7 +28,7 @@ public class successfulServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
+
         String pName = req.getParameter("passengerName");
         String gender = req.getParameter("gender");
         Gender gen = Gender.valueOf(gender);
@@ -38,7 +37,17 @@ public class successfulServlet extends HttpServlet {
 
         String ticketId = createID();
         ticketDao.addTicket(pName, gen, travel, ticketId);
+        String type = maleOrFemale(gender);
+        req.setAttribute("type", type);
+        req.setAttribute("passenger", pName);
+        req.setAttribute("id", ticketId);
+        req.getRequestDispatcher("successful.jsp").forward(req, resp);
+    }
 
-
+    public String maleOrFemale(String gender) {
+        if (gender.equals("MALE")) {
+            return "Mr.";
+        }
+        return "Mrs.";
     }
 }

@@ -20,9 +20,9 @@
         <tr>
             <th>Gender :</th>
             <td align="center">
-                <input type="radio" id="male" name="gender" value="male">
+                <input type="radio" id="male" name="gender" value="MALE" required>
                 <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
+                <input type="radio" id="female" name="gender" value="FEMALE">
                 <label for="female">Female</label>
             </td>
         </tr>

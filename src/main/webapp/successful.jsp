@@ -9,12 +9,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>successfully</title>
 </head>
 <body>
-<p></p>
-<c:out value="${requestScope.type}"></c:out>
-<c:out value="${requestScope.passenger}"></c:out>
-<c:out value="${requestScope.id}"></c:out>
+<p align="center">
+    The ticket purchase for <c:out value="${requestScope.type}"></c:out>
+    <c:out value="${requestScope.passenger}"></c:out> was successful.
+
+</p>
+<p align="center">
+    Ticket id: <c:out value="${requestScope.id}"></c:out>
+</p>
 </body>
 </html>

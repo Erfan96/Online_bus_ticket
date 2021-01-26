@@ -30,4 +30,12 @@
         <servlet-name>travel</servlet-name>
         <url-pattern>/travel</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>buy</servlet-name>
+        <servlet-class>servlet.buyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>buy</servlet-name>
+        <url-pattern>/buy</url-pattern>
+    </servlet-mapping>
 </web-app>

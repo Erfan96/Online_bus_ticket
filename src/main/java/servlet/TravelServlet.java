@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -27,6 +28,8 @@ public class TravelServlet extends HttpServlet {
 
         if (date.length() == 10) {
             List<Travel> travels = travelDao.getTravels(origin, destination, date);
+            HttpSession session = req.getSession();
+            session.setAttribute("travels", travels);
             req.setAttribute("list", travels);
             req.getRequestDispatcher("travel.jsp").forward(req, resp);
         }

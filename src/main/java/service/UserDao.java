@@ -40,4 +40,18 @@ public class UserDao extends EntityDao<User, Integer>{
 
         return true;
     }
+
+    public User getUserWithUsernameAndPassword(String username, String password) {
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<User> criteria = cb.createQuery(User.class);
+        Root<User> fromUser = criteria.from(User.class);
+
+        Predicate predicate = cb.and(
+          cb.equal(fromUser.get("userName"), username),
+          cb.equal(fromUser.get("password"), password)
+        );
+
+        criteria.select(fromUser).where(predicate);
+        return entityManager.createQuery(criteria).getSingleResult();
+    }
 }

@@ -49,6 +49,7 @@ public class successfulServlet extends HttpServlet {
 
         UserDao userDao = new UserDao(entityManager);
         User finalUser = userDao.getUserWithUsernameAndPassword(user, pass);
+        session.setAttribute("use", finalUser);
 
         String ticketId = createID();
         ticketDao.addTicket(pName, gen, travel, ticketId, finalUser);

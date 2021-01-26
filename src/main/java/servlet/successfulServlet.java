@@ -2,14 +2,13 @@ package servlet;
 
 import entities.Gender;
 import entities.Travel;
+import entities.User;
 import service.TicketDao;
+import service.UserDao;
 import util.JpaUtil;
 import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -22,7 +21,7 @@ public class successfulServlet extends HttpServlet {
 
     public static String createID()
     {
-        return String.valueOf((idCounter.getAndIncrement()) + count);
+        return String.valueOf((idCounter.getAndIncrement()) + count + 1);
     }
 
     @Override
@@ -35,8 +34,24 @@ public class successfulServlet extends HttpServlet {
         HttpSession session = req.getSession();
         Travel travel = (Travel) session.getAttribute("chosen");
 
+        String user = null;
+        String pass = null;
+
+        Cookie[] cookie = req.getCookies();
+        for (Cookie cookies : cookie) {
+            if (cookies.getName().equals("user")) {
+                user = cookies.getValue();
+            }
+            else if(cookies.getName().equals("pass")) {
+                pass = cookies.getValue();
+            }
+        }
+
+        UserDao userDao = new UserDao(entityManager);
+        User finalUser = userDao.getUserWithUsernameAndPassword(user, pass);
+
         String ticketId = createID();
-        ticketDao.addTicket(pName, gen, travel, ticketId);
+        ticketDao.addTicket(pName, gen, travel, ticketId, finalUser);
         String type = maleOrFemale(gender);
         req.setAttribute("type", type);
         req.setAttribute("passenger", pName);

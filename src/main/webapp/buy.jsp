@@ -11,6 +11,7 @@
     <title>buy</title>
 </head>
 <body>
+  <form action="success" method="post">
     <table align="center" border="2" style="width:30%">
         <tr>
             <th>Name :</th>
@@ -27,11 +28,12 @@
         </tr>
         <tr>
             <td align="center" colspan="2">
-                <form action="" method="post">
+
                 <input type="submit" name="save" value="submit">
-                </form>
+
             </td>
         </tr>
     </table>
+  </form>
 </body>
 </html>

@@ -20,5 +20,9 @@
 <p align="center">
     Ticket id: <c:out value="${requestScope.id}"></c:out>
 </p>
+
+<form action="ticket">
+    <input type="submit" name="show" value="show">
+</form>
 </body>
 </html>

@@ -5,9 +5,12 @@ import entities.Ticket;
 import entities.Travel;
 import entities.User;
 import javax.persistence.EntityManager;
+import javax.persistence.Tuple;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import java.util.List;
 
 public class TicketDao extends EntityDao<Ticket, Integer>{
 
@@ -44,5 +47,17 @@ public class TicketDao extends EntityDao<Ticket, Integer>{
         criteria.select(cb.count(fromTicket.get("id")));
 
         return entityManager.createQuery(criteria).getSingleResult();
+    }
+
+    public List<Tuple> getDateAndId(User user) {
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Tuple> criteria = cb.createTupleQuery();
+        Root<Ticket> fromTicket = criteria.from(Ticket.class);
+
+        criteria.multiselect(fromTicket.get("ticketId"), fromTicket.get("travel").get("departureDate"))
+                .where(cb.equal(fromTicket.get("user"), user));
+
+        TypedQuery<Tuple> query = entityManager.createQuery(criteria);
+        return query.getResultList();
     }
 }

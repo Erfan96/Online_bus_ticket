@@ -31,4 +31,8 @@ public class Ticket {
 
     @Column(name = "ticket_id", nullable = false)
     private String ticketId;
+
+    @ManyToOne
+    @JoinColumn(name = "client_user_id")
+    private User user;
 }

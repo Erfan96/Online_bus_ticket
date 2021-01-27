@@ -39,16 +39,6 @@ public class TicketDao extends EntityDao<Ticket, Integer>{
         entityManager.close();
     }
 
-    public Long countTickets() {
-        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
-        CriteriaQuery<Long> criteria = cb.createQuery(Long.class);
-        Root<Ticket> fromTicket = criteria.from(Ticket.class);
-
-        criteria.select(cb.count(fromTicket.get("id")));
-
-        return entityManager.createQuery(criteria).getSingleResult();
-    }
-
     public List<Tuple> getDateAndId(User user) {
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<Tuple> criteria = cb.createTupleQuery();

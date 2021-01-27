@@ -16,7 +16,7 @@
         }
     }
 
-    if (count == 2) {
+    if (count >= 2) {
         request.getRequestDispatcher("/login").forward(request, response);
     }
 %>

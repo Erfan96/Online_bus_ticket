@@ -67,4 +67,23 @@ public class TicketDao extends EntityDao<Ticket, Integer>{
         TypedQuery<Tuple> query = entityManager.createQuery(criteria);
         return query.getResultList();
     }
+
+    public void removeTicket(String ticketId) {
+        entityManager.getTransaction().begin();
+        Ticket ticket = getTicketWithId(ticketId);
+        delete(ticket);
+
+        entityManager.getTransaction().commit();
+        entityManager.close();
+    }
+
+    public Ticket getTicketWithId(String ticketId) {
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Ticket> criteria = cb.createQuery(Ticket.class);
+        Root<Ticket> fromTicket = criteria.from(Ticket.class);
+
+        criteria.select(fromTicket).where(cb.equal(fromTicket.get("ticketId"), ticketId));
+        TypedQuery<Ticket> query = entityManager.createQuery(criteria);
+        return query.getSingleResult();
+    }
 }

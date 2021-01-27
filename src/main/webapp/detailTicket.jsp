@@ -53,7 +53,7 @@
           <td><c:out value="${ticket.get(7)}" /></td>
       </tr>
       <tr>
-          <th colspan="4"><a href="">Cancel ticket</a></th>
+          <th colspan="4"><a href="cancel?value=${ticket.get(0)}">Cancel ticket</a></th>
       </tr>
   </c:forEach>
   </table>

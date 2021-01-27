@@ -25,7 +25,7 @@
     </tr>
     <c:forEach var="ticket" items="${list}">
         <tr>
-            <td align="center">ok</td>
+            <td align="center"><a href="showTicket?value=${ticket.get(0)}">Show ticket</a></td>
             <td align="center"><c:out value="${ticket.get(0)}" /></td>
             <td align="center"><c:out value="${ticket.get(1)}" /></td>
         </tr>

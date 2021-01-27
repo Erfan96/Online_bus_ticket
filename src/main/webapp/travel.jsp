@@ -11,11 +11,12 @@
 <html>
 <head>
     <title>Travel</title>
+    <link rel="stylesheet" type="text/css" href="travel.css" />
 </head>
 <body>
 
 <div align="center">
-    <table border="1" cellpadding="5">
+    <table class="table" border="1">
         <tr>
             <td colspan="2"><lable>Direction : ${list[0]}</lable></td>
             <td><lable>Departure date :<br><c:out value="${requestScope.list[0].departureDate}" /></lable></td>

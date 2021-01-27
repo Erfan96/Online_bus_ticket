@@ -40,7 +40,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>success</servlet-name>
-        <servlet-class>servlet.successfulServlet</servlet-class>
+        <servlet-class>servlet.SuccessfulServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>success</servlet-name>
@@ -48,10 +48,18 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>ticket</servlet-name>
-        <servlet-class>servlet.TicketServlet</servlet-class>
+        <servlet-class>servlet.ListTicketServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ticket</servlet-name>
         <url-pattern>/ticket</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>showOneTicket</servlet-name>
+        <servlet-class>servlet.ShowTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>showOneTicket</servlet-name>
+        <url-pattern>/showTicket</url-pattern>
     </servlet-mapping>
 </web-app>

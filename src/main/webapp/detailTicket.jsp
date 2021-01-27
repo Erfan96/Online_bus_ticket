@@ -10,10 +10,11 @@
 <html>
 <head>
     <title>Detail ticket</title>
+    <link rel="stylesheet" type="text/css" href="detailTicket.css" />
 </head>
 <body>
 
-  <table border="2" cellpadding="5">
+  <table id="table" align="center" border="2" cellpadding="5">
   <c:forEach var="ticket" items="${list}">
       <tr>
        <th colspan="4">

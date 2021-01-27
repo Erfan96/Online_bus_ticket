@@ -10,8 +10,10 @@
 <html>
 <head>
     <title>successfully</title>
+    <link rel="stylesheet" type="text/css" href="successful.css" />
 </head>
 <body>
+<div id="text">
 <p align="center">
     The ticket purchase for <c:out value="${requestScope.type}"></c:out>
     <c:out value="${requestScope.passenger}"></c:out> was successful.
@@ -20,9 +22,10 @@
 <p align="center">
     Ticket id: <c:out value="${requestScope.id}"></c:out>
 </p>
-
+</div>
+<p>List of your tickets:</p>
 <form action="ticket">
-    <input type="submit" name="show" value="show">
+    <input class="show" type="submit" name="show" value="show">
 </form>
 </body>
 </html>

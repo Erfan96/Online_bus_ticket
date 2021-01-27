@@ -1,0 +1,37 @@
+.container{
+    background-color: rgba(0,0,0,0.5) ;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 430px;
+    padding: 40px;
+}
+input{
+    width: 100%;
+    padding: 18px;
+    margin: 14px 0;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+    background-color:  rgba(0,0,0,0.5);
+    color: white;
+}
+#butt{
+    width: 100%;
+    padding: 18px;
+    margin: 14px 0;
+    background-color: cornflowerblue;
+    color: wheat;
+    border: none;
+    font-size: 25px;
+}
+label{
+    color: darkblue;
+    font-size: 18px;
+}

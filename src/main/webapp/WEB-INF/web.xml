@@ -62,4 +62,12 @@
         <servlet-name>showOneTicket</servlet-name>
         <url-pattern>/showTicket</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>cancelTicket</servlet-name>
+        <servlet-class>servlet.CancelTicketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cancelTicket</servlet-name>
+        <url-pattern>/cancel</url-pattern>
+    </servlet-mapping>
 </web-app>

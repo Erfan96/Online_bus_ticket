@@ -1,4 +1,4 @@
-<%@ page import="java.lang.reflect.Method" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: efsam
   Date: 1/23/2021
@@ -23,8 +23,10 @@
 <html>
 <head>
     <title>Enter</title>
+    <link rel="stylesheet" type="text/css" href="login.css" />
 </head>
 <body>
+<div class="container">
 <form action="login" >
     <label> UserName :
         <input name="userName" type="text" placeholder="Enter your username" required>
@@ -32,7 +34,8 @@
     <label>  Password :
         <input name="password" type="password" placeholder="Enter your password" required>
     </label><br>
-<input type="submit" value="Login">
+<input id="butt" type="submit" value="Login">
 </form>
+</div>
 </body>
 </html>

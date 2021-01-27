@@ -41,5 +41,9 @@
 
 </form>
 
+<form action="ticket">
+    <input type="submit" name="show" value="show">
+</form>
+
 </body>
 </html>

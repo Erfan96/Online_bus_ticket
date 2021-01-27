@@ -10,39 +10,42 @@
 <html>
 <head>
     <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="search.css" />
 </head>
 <body>
 
+<div class="container">
 <form action="travel" method="get">
 
-    <label> Origin
-        <select name="origin">
+    <label id="org"> Origin </label>
+    <label id="des"> Destination </label>
+    <label id="dat"> Date</label><br>
+
+        <select id="ori" name="origin">
             <option value="0">Select your origin...</option>
             <c:forEach items="${list}" var="city">
                 <option value="${city.id}">${city.name}</option>
             </c:forEach>
         </select>
-    </label>
 
-    <label> Destination
-        <select name="destination">
+        <select id="desti" name="destination">
             <option value="0">Select your destination...</option>
             <c:forEach items="${list}" var="city">
                 <option value="${city.id}">${city.name}</option>
             </c:forEach>
         </select>
-    </label>
 
-    <label> Date
-        <input name="date" type="text" placeholder="2021/**/**">
-    </label>
+       <input id="date" name="date" type="text" placeholder="2021/**/**">
 
-    <input type="submit" value="search">
+
+       <input id="sear" type="submit" value="search">
 
 </form>
+</div>
 
+<p>List of your tickets:</p>
 <form action="ticket">
-    <input type="submit" name="show" value="show">
+    <input id="butt" type="submit" name="show" value="show">
 </form>
 
 </body>

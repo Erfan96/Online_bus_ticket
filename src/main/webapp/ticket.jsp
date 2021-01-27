@@ -10,9 +10,10 @@
 <html>
 <head>
     <title>List of tickets</title>
+    <link rel="stylesheet" type="text/css" href="ticket.css" />
 </head>
 <body>
-<table border="1" cellpadding="5">
+<table align="center" id="table" border="1" cellpadding="5">
     <tr>
         <th colspan="3">
             List of purchased tickets

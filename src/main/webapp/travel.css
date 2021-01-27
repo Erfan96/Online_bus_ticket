@@ -1,0 +1,14 @@
+.table tr th{
+    width: 150px;
+    height: 100px;
+    background-color:darkblue;
+    font-size: 18px;
+    text-align: center;
+    color: azure;
+}
+.table tr td{
+    text-align: center;
+    background-color: cornflowerblue;
+    padding: 20px;
+    color: azure;
+}

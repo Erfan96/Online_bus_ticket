@@ -32,7 +32,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>buy</servlet-name>
-        <servlet-class>servlet.buyServlet</servlet-class>
+        <servlet-class>servlet.BuyServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>buy</servlet-name>

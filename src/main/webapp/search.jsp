@@ -12,7 +12,7 @@
     <title>Search</title>
     <link rel="stylesheet" type="text/css" href="search.css" />
 </head>
-<body>
+<body id="back">
 
 <div class="container">
 <form action="travel" method="get">
@@ -43,7 +43,7 @@
 </form>
 </div>
 
-<p>List of your tickets:</p>
+<p id="title">List of your tickets:</p>
 <form action="ticket">
     <input id="butt" type="submit" name="show" value="show">
 </form>

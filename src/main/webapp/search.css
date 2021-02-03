@@ -56,3 +56,9 @@ select{
     background-color: black;
     background-image: linear-gradient(to right, black , deepskyblue);
 }
+#title{
+    color:  white;
+}
+#back{
+    background-color:  rgb(143, 142, 142);
+}

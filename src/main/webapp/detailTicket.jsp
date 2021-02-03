@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  <table id="table" align="center" border="2" cellpadding="5">
+  <table id="table">
   <c:forEach var="ticket" items="${list}">
       <tr>
        <th colspan="4">

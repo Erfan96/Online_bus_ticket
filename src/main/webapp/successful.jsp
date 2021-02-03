@@ -12,7 +12,7 @@
     <title>successfully</title>
     <link rel="stylesheet" type="text/css" href="successful.css" />
 </head>
-<body>
+<body id="back">
 <div id="text">
 <p align="center">
     The ticket purchase for <c:out value="${requestScope.type}"></c:out>
@@ -23,7 +23,7 @@
     Ticket id: <c:out value="${requestScope.id}"></c:out>
 </p>
 </div>
-<p>List of your tickets:</p>
+<p id="title">List of your tickets:</p>
 <form action="ticket">
     <input class="show" type="submit" name="show" value="show">
 </form>

@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="ticket.css" />
 </head>
 <body>
-<table align="center" id="table" border="1" cellpadding="5">
+<table id="table">
     <tr>
         <th colspan="3">
             List of purchased tickets

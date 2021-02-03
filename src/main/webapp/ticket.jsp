@@ -15,14 +15,14 @@
 <body>
 <table id="table">
     <tr>
-        <th colspan="3">
+        <th align="center" colspan="3">
             List of purchased tickets
         </th>
     </tr>
     <tr>
-        <th>Select</th>
-        <th>Ticket id</th>
-        <th>Date</th>
+        <th align="center">Select</th>
+        <th align="center">Ticket id</th>
+        <th align="center">Date</th>
     </tr>
     <c:forEach var="ticket" items="${list}">
         <tr>

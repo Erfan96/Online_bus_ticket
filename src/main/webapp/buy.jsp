@@ -13,7 +13,7 @@
 </head>
 <body>
   <form action="success" method="post">
-    <table align="center" border="2" style="width:30%">
+    <table id="type">
         <tr>
             <th>Name :</th>
             <td><input id="txt" type="text" placeholder="Enter passenger name" name="passengerName" required></td>

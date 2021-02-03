@@ -10,14 +10,16 @@
     int count = 0;
 
     Cookie[] cookie = request.getCookies();
-    for (Cookie value : cookie) {
-        if (value.getName().equals("user") || value.getName().equals("pass")) {
-            count++;
+    if (cookie.length > 0) {
+        for (Cookie value : cookie) {
+            if (value.getName().equals("user") || value.getName().equals("pass")) {
+                count++;
+            }
         }
-    }
 
-    if (count >= 2) {
-        request.getRequestDispatcher("/login").forward(request, response);
+        if (count >= 2) {
+            request.getRequestDispatcher("/login").forward(request, response);
+        }
     }
 %>
 <html>
@@ -25,7 +27,7 @@
     <title>Enter</title>
     <link rel="stylesheet" type="text/css" href="login.css" />
 </head>
-<body>
+<body id="back">
 <div class="container">
 <form action="login" >
     <label> UserName :

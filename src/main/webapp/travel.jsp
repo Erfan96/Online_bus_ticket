@@ -16,7 +16,7 @@
 <body>
 
 <div align="center">
-    <table class="table" border="1">
+    <table id="ticket" border="1">
         <tr>
             <td colspan="2"><lable>Direction : ${list[0]}</lable></td>
             <td><lable>Departure date :<br><c:out value="${requestScope.list[0].departureDate}" /></lable></td>
@@ -32,7 +32,7 @@
                 <td align="center"><c:out value="${travel.departureTime}" /></td>
                 <td align="center"><c:out value="${travel.travelId}" /></td>
                <form action="buy">
-                <td align="center" ><input name="${travel.travelId}" type="submit" value="buy"></td>
+                <td align="center" ><input id="but" name="${travel.travelId}" type="submit" value="buy"></td>
                </form>
             </tr>
         </c:forEach>

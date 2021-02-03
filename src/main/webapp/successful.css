@@ -18,3 +18,9 @@ color: azure;
     margin: 3px;
     border: none;
 }
+#title{
+    color: white;
+}
+#back{
+    background-color: rgb(143, 142, 142);
+}

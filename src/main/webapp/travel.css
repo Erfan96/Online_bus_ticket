@@ -1,14 +1,25 @@
-.table tr th{
-    width: 150px;
-    height: 100px;
-    background-color:darkblue;
-    font-size: 18px;
-    text-align: center;
-    color: azure;
+#ticket {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
-.table tr td{
-    text-align: center;
-    background-color: cornflowerblue;
-    padding: 20px;
-    color: azure;
+
+#ticket td, #ticket th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#ticket tr:nth-child(even){background-color: #f2f2f2;}
+
+#ticket tr:hover {background-color: #ddd;}
+
+#ticket th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4c90af;
+    color: white;
+}
+#but{
+    padding: 10px;
 }

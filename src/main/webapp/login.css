@@ -26,7 +26,7 @@ input{
     width: 100%;
     padding: 18px;
     margin: 14px 0;
-    background-color: cornflowerblue;
+    background-color: rgb(12, 36, 82);
     color: wheat;
     border: none;
     font-size: 25px;
@@ -34,4 +34,7 @@ input{
 label{
     color: darkblue;
     font-size: 18px;
+}
+#back{
+    background-color: rgb(143, 142, 142);
 }

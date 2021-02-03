@@ -43,9 +43,7 @@ public class LoginFilter implements Filter {
                 servletRequest.getRequestDispatcher("login.jsp").include(servletRequest, servletResponse);
             }
         }
-        finally {
-            entityManager.close();
-        }
+
     }
 
     @Override
